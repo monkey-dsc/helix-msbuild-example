@@ -1,12 +1,35 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
     <RootNamespace>Feature.DummyContent</RootNamespace>
     <AssemblyName>Feature.DummyContent</AssemblyName>
+    <Configurations>Debug;Release;DEV</Configurations>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Styles\DummyContent\_Feature-DummyContent.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Styles\DummyContent\_Feature-DummyContent.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Config\Include\Feature\Feature.DummyContent\Feature.DummyContent.config.any.xdt">
+      <DependentUpon>Feature.DummyContent.config</DependentUpon>
+    </None>
+    <None Include="App_Config\Include\Feature\Feature.DummyContent\Feature.DummyContent.config.dev.xdt">
+      <DependentUpon>Feature.DummyContent.config</DependentUpon>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Sitecore.Kernel" Version="[9.1.0]">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Styles\DummyContent\_Feature-DummyContent.css">
+      <DependentUpon>_Feature-DummyContent.scss</DependentUpon>
+    </None>
+    <Content Update="Styles\DummyContent\_Feature-DummyContent.min.css">
+      <DependentUpon>_Feature-DummyContent.css</DependentUpon>
+    </Content>
   </ItemGroup>
 </Project>

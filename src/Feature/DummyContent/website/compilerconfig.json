@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Styles/_Feature-DummyContent.css",
+    "inputFile": "Styles/_Feature-DummyContent.scss"
+  },
+  {
+    "outputFile": "Scripts/DummyContent/index.es5.js",
+    "inputFile": "Scripts/DummyContent/index.js"
+  }
+]

@@ -20,6 +20,7 @@ Website.TransformXml.targets
 ***********************************************************************************************
 -->
 
+<!--EXTERNAL_PROPERTIES: MSBuildToolsVersion;XmlTransformFilePostfix-->
 <Project>
   <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(MSBuildToolsVersion)\Web\Microsoft.Web.Publishing.Tasks.dll" />
   
